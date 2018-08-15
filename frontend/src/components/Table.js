@@ -4,7 +4,7 @@ import key from "weak-key";
 
 const Table = ({ data }) =>
   !data.length ? (
-    <p>Nada para mostrar!</p>
+    <p>Nada pra mostrar!</p>
   ) : (
     <div className="column">
       <h2 className="subtitle">
@@ -13,13 +13,21 @@ const Table = ({ data }) =>
       <table className="table is-striped">
         <thead>
           <tr>
-            {Object.entries(data[0]).map(el => <th key={key(el)}>{el[0]}</th>)}
+            {
+                Object.entries(data[0])
+                    .map(el =>
+                        <th key={key(el)}>{el[0]}</th>)
+            }
           </tr>
         </thead>
         <tbody>
           {data.map(el => (
             <tr key={el.id}>
-              {Object.entries(el).map(el => <td key={key(el)}>{el[1]}</td>)}
+              {
+                  Object.entries(el)
+                      .map(el =>
+                          <td key={key(el)}>{el[1]}</td>)
+              }
             </tr>
           ))}
         </tbody>

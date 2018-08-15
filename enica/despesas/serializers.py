@@ -12,7 +12,7 @@ class DespesaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Despesa
         fields = '__all__'
-        read_only_fields = ['pk','quantidade_parcela']
+        read_only_fields = ['pk','quantidade_parcela','quitado']
 
     # Foi necessário sobrescrever devido as parcelas.
     def create(self,validated_data):

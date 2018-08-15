@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'enica.despesas',
     'rest_framework', # enable rest framework
+    'frontend',
+
+
 ]
 
 MIDDLEWARE = [
